@@ -12,7 +12,7 @@ class ShapeManager:
         ----------
         center
         """
-        sphere = Sphere(center, radius)
+        sphere = Sphere(point=center, radius=radius)
         self.shapes.append(sphere)
 
     def add_box(self, corner: Point, width: float, height: float, depth: float) -> None:
@@ -29,12 +29,13 @@ class ShapeManager:
         Compute the total volume of all shapes.
         """
         # TODO: Implement this
+        return sum([shape.volume for shape in self.shapes])
 
     def largest_shape(self) -> Shape:
         """
         Find the shape with the largest volume.
         """
-        # TODO: Implement this
+        return max(self.shapes, key=lambda shape: shape.volume)
 
     def move_shape(self, index: int, vector: Vector) -> None:
         """
