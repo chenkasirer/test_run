@@ -2,8 +2,11 @@
 name = "my_library"
 description = "This is a library for doing things."
 requires-python = ">=3.10"
-dependencies = ["compas"]
+dynamic = ["dependencies"]
 version = "0.1.0"
 authors = [
     { name = "Chen Kasirer", email = "kasirer@arch.ethz.ch" }
 ]
+
+[tool.setuptools.dynamic]
+dependencies = {file="requirements.txt"}
