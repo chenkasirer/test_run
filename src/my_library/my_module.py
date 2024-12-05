@@ -8,6 +8,9 @@ class MyClass:
     def my_method(self):
         return self.box.area
 
+    def another_method(self):
+        return self.box.volume
+
 
 def my_function():
     return Box(1.0).area
