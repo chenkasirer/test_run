@@ -1,3 +1,4 @@
 compas
 ur-rtde>=1.5.9
 pytest
+ruff 

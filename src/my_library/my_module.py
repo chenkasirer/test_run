@@ -10,7 +10,7 @@ class MyClass:
 
     def yet_another_method(self):
         return self.box.width
-        
+
     def another_method(self):
         return self.box.volume
 

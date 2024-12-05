@@ -1,4 +1,8 @@
-from compas.geometry import Sphere, Box, Vector, Point, Shape
+from compas.geometry import Box
+from compas.geometry import Point
+from compas.geometry import Shape
+from compas.geometry import Sphere
+from compas.geometry import Vector
 
 
 class ShapeManager:

@@ -10,3 +10,9 @@ authors = [
 
 [tool.setuptools.dynamic]
 dependencies = {file="requirements.txt"}
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.isort]
+force-single-line = true

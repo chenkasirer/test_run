@@ -1,4 +1,5 @@
 from compas.tolerance import TOL
+
 from my_library import ShapeManager
 
 
