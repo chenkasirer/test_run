@@ -1,0 +1,37 @@
+name: Build
+
+on: 
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    build:
+        runs-on: [ubuntu-latest, windows-latest]
+    
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v4
+
+            - name: install python
+              uses: actions/setup-python@v5
+              with:
+                python-version: "3.10"
+
+            - name: install our package
+              run: |
+                python -m pip install --upgrade pip
+                pip install . 
+            
+            - name: run unittests
+              run: |
+                pytest
+            
+            - name: run linting checks
+              run: |
+                ruff check
+            
+            - name: run formatter checks
+              run: |
+                ruff format --check
+            
