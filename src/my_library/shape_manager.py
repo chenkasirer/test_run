@@ -41,8 +41,9 @@ class ShapeManager:
         """
         return max(self.shapes, key=lambda shape: shape.volume)
 
+
     def move_shape(self, index: int, vector: Vector) -> None:
         """
         Move a shape by a given vector.
         """
-        # TODO: Implement this
+        self.shapes[index].translate(vector)
